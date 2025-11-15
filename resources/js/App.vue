@@ -1,16 +1,20 @@
 <template>
-  <div id="app">
-    <HelloWorld msg="Halo dari App.vue!" />
+  <div class="d-flex">
+    <SideBar />
+    <div class="flex-grow-1 p-4">
+      <router-view></router-view> 
+    </div>
   </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue' 
+import SideBar from './components/SideBar.vue' 
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SideBar
   },
 }
 </script>
@@ -18,6 +22,5 @@ export default {
 <style>
 #app {
   text-align: center;
-  margin-top: 50px;
 }
 </style>
